@@ -1,10 +1,16 @@
 {
   "name": "eslint-plugin-jsx-dollar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint plugin that check JSXText's unnecessary template literal `$` character",
   "main": "dist/index.js",
-  "files": ["dist"],
-  "keywords": ["eslint", "eslint-plugin", "jsx"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "jsx"
+  ],
   "author": "kyoncy <kyota.n.2014@gmail.com>",
   "repository": {
     "type": "git",

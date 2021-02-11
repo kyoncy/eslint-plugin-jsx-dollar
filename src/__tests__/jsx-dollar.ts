@@ -26,6 +26,7 @@ describe("test", () => {
       { code: "<span>Something{`${variable}`}</span>" },
       { code: "<span>{`${variable}`}Something</span>" },
       { code: "<span>{`$`}</span>" },
+      { code: "<span>Something$</span>" },
     ],
     invalid: [
       {

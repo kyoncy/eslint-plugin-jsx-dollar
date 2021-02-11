@@ -21,18 +21,21 @@ export const jsxDollar: Omit<
   create: (context) => {
     return {
       JSXElement(node) {
-        node.children.forEach(JSXChild => {
+        node.children.forEach((JSXChild, index) => {
           if (JSXChild.type === AST_NODE_TYPES.JSXText && JSXChild.value.endsWith("$")) {
-            context.report({
-              node,
-              messageId: "removeDollar",
-              suggest: [
-                {
-                  messageId: "removeDollar",
-                  fix: (fixer) => fixer.removeRange([JSXChild.range[1] - 1, JSXChild.range[1]]),
-                },
-              ],
-            });
+            const nextJSXChild = node.children?.[index + 1];
+            if (nextJSXChild && nextJSXChild.type === AST_NODE_TYPES.JSXExpressionContainer) {
+              context.report({
+                node,
+                messageId: "removeDollar",
+                suggest: [
+                  {
+                    messageId: "removeDollar",
+                    fix: (fixer) => fixer.removeRange([JSXChild.range[1] - 1, JSXChild.range[1]]),
+                  },
+                ],
+              });
+            }
           }
         });
       },
