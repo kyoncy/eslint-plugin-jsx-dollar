@@ -20,7 +20,7 @@ module.exports = {
   ],
   "rules": [
     ...,
-    "jsx-dollar": "error",
+    "jsx-dollar/jsxDollar": "error",
   ]
   ...,
 }
