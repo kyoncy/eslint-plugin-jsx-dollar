@@ -1,0 +1,41 @@
+{
+  "name": "eslint-plugin-jsx-dollar",
+  "version": "1.0.0",
+  "description": "Eslint plugin that check JSXText's unnecessary template literal `$` character",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "keywords": ["eslint", "eslint-plugin", "jsx"],
+  "author": "kyoncy <kyota.n.2014@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyoncy/eslint-plugin-jsx-dollar"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext=ts,tsx src",
+    "test": "jest",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "@typescript-eslint/experimental-utils": "^4.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "@typescript-eslint/typescript-estree": "^4.15.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-local-rules": "^1.0.1",
+    "espree": "^7.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "typescript": "^4.1.5"
+  }
+}
