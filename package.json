@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jsx-dollar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eslint plugin that check JSXText's unnecessary template literal `$` character",
   "main": "dist/index.js",
   "files": [
@@ -24,9 +24,6 @@
     "test": "jest",
     "prepublish": "yarn build"
   },
-  "dependencies": {
-    "@typescript-eslint/experimental-utils": "^4.15.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
@@ -34,6 +31,7 @@
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/experimental-utils": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "@typescript-eslint/typescript-estree": "^4.15.0",
     "eslint": "^7.19.0",

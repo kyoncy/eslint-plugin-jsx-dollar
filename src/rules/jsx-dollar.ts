@@ -1,4 +1,4 @@
-import { TSESLint, AST_NODE_TYPES } from "@typescript-eslint/experimental-utils";
+import { TSESLint } from "@typescript-eslint/experimental-utils";
 
 export const jsxDollar: Omit<
   TSESLint.RuleModule<"removeDollar", []>,
@@ -22,9 +22,9 @@ export const jsxDollar: Omit<
     return {
       JSXElement(node) {
         node.children.forEach((JSXChild, index) => {
-          if (JSXChild.type === AST_NODE_TYPES.JSXText && JSXChild.value.endsWith("$")) {
+          if (JSXChild.type === "JSXText" && JSXChild.value.endsWith("$")) {
             const nextJSXChild = node.children?.[index + 1];
-            if (nextJSXChild && nextJSXChild.type === AST_NODE_TYPES.JSXExpressionContainer) {
+            if (nextJSXChild && nextJSXChild.type === "JSXExpressionContainer") {
               context.report({
                 node,
                 messageId: "removeDollar",
