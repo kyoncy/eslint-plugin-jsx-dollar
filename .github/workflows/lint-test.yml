@@ -1,6 +1,9 @@
 name: lint-test
 
-on: push
+on:
+  push:
+    branches:
+      - '*'
 
 jobs:
   lint-test:
@@ -16,5 +19,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-node-
       - run: yarn
+      - run: yarn build
       - run: yarn lint
       - run: yarn test
