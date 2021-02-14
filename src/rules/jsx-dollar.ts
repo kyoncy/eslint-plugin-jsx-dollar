@@ -28,12 +28,9 @@ export const jsxDollar: Omit<
               context.report({
                 node,
                 messageId: "removeDollar",
-                suggest: [
-                  {
-                    messageId: "removeDollar",
-                    fix: (fixer) => fixer.removeRange([JSXChild.range[1] - 1, JSXChild.range[1]]),
-                  },
-                ],
+                fix(fixer) {
+                  return fixer.removeRange([JSXChild.range[1] - 1, JSXChild.range[1]]);
+                },
               });
             }
           }
