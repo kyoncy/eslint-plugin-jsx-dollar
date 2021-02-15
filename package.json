@@ -3,7 +3,9 @@
   "version": "1.0.4",
   "description": "Eslint plugin that check JSXText's unnecessary template literal `$` character",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "eslint",
     "eslint-plugin",
@@ -18,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --ext=ts,tsx src",
+    "lint": "eslint src",
     "test": "jest"
   },
   "devDependencies": {
@@ -30,7 +32,6 @@
     "@typescript-eslint/eslint-plugin": "4.15.0",
     "@typescript-eslint/experimental-utils": "4.15.0",
     "@typescript-eslint/parser": "4.15.0",
-    "@typescript-eslint/typescript-estree": "4.15.0",
     "eslint": "7.20.0",
     "eslint-plugin-local-rules": "1.0.1",
     "espree": "7.3.1",

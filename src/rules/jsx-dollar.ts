@@ -1,9 +1,6 @@
 import { TSESLint } from "@typescript-eslint/experimental-utils";
 
-export const jsxDollar: Omit<
-  TSESLint.RuleModule<"removeDollar", []>,
-  "docs"
-> = {
+export const jsxDollar: TSESLint.RuleModule<"removeDollar", []> = {
   meta: {
     type: "suggestion",
     docs: {
